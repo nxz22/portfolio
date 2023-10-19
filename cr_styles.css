@@ -1,0 +1,251 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;  
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    zoom: 95%;
+}
+
+h3 {
+    text-shadow: 1px 1px 3px #c2c2c2;
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.divider-line {
+    height: 1px;
+    width: 50%;
+    background-color: rgba(242, 242, 242, .2);
+    margin: 0 auto; 
+}
+
+.about-container {
+    display: block; 
+    text-align: center;
+    margin-top: -100px; 
+}
+
+.about-container::before {
+    content: "creative";
+    position: absolute; 
+    top: 24%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 200px; 
+    opacity: 0.1; 
+    z-index: -1; 
+    color: #ffffff; 
+}
+
+.about-content {
+    max-width: 800px; 
+    margin: 0 auto;  
+}
+
+.about-text {
+    padding: 20px;  
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  
+    gap: 20px;  
+    padding: 20px;  
+    margin-top: 50px;
+
+}
+
+.gallery-item {
+    font-size: 12px;
+    display: block;
+    width: 300px;  
+    border-radius: 10px; 
+    overflow: hidden;  
+    text-decoration: none;  
+    color: #ffffff; 
+    transition: transform 0.3s; 
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);  
+}
+
+.item-image img {
+    width: 100%;  
+    height: auto; 
+    border-radius: 10px; 
+}
+
+
+.item-content {
+    padding: 10px;  
+}
+
+.item-title {
+    margin: 0; 
+    font-size: 1.5em; 
+}
+
+.item-description {
+    margin: 0;
+}
+#bgVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    overflow: hidden;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.top-navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 101;
+}
+
+.ui_button1 img, .ui_button2 img, .ui_button3 img, .ui_button4 img {
+    position: fixed;
+    transition: transform 0.3s;
+    z-index: 100;
+}
+
+.ui_button1:hover img {
+    transform: scale(0.36);  
+}
+
+.ui_button1 img {
+    top: 25px;  
+    right: -40px;  
+    transform: scale(0.342);  
+}
+
+.ui_button2:hover img, .ui_button3:hover img, .ui_button4:hover img {
+    transform: scale(0.432);  
+}
+
+.ui_button2 img {
+    top: -55px;  
+    right: 145px;  
+    transform: scale(0.36);  
+}
+
+.ui_button3 img {
+    top: 25px;  
+    right: 120px;  
+    transform: scale(0.36);  
+}
+
+.ui_button4 img {
+    top: 90px;  
+    right: -55px;  
+    transform: scale(0.36);  
+}
+
+#topRightImage, #bottomLeftImage {
+    pointer-events: none;
+}
+
+#topRightImage {
+    position: fixed;
+    top: -9px;  
+    right: -18px;  
+    width: 27vw;  
+    max-width: 270px;  
+    z-index: 99;
+}
+
+#bottomLeftImage {
+    position: fixed;
+    bottom: -36px;  
+    left: -27px;  
+    width: 27vw;  
+    max-width: 270px;  
+    z-index: 99;
+}
+
+.cd img {
+    position: fixed;
+    bottom: -126px;  
+    left: -54px;  
+    width: 27vw;  
+    max-width: 270px;  
+    z-index: 98;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.rotating {
+    animation: spin 5s linear infinite;
+}
+
+.music-title {
+    position: fixed;    
+    top: 0;            
+    left: 0;            
+    width: 100%;        
+    opacity: 0.5;     
+    z-index: 101;       
+    text-align: center; 
+    user-select: none;         
+}
+
+#musicBar {
+    display: none;
+}
+
+.music-title {
+    color: white;
+    font-weight: 400;
+}
+
+.music-prefix {
+    color: white;
+    font-weight: 800;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(54, 179, 246, 0.5); 
+    border-radius: 5px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.5); 
+}

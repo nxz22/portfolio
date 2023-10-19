@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazeem Bacus - Design Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<video id="bgVideo" autoplay muted loop>
+    <source src="assets/bg_1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<div class="title-container fade-in">
+    <span class="tiny-text">2023 - Advanced Computer Vision Integration </span>
+    <h1 class="main-title">Training Monkeys with Pokémon</h1>
+    <div class="tag">Software</div>
+    <div class="tag">Computer Vision</div>
+
+</div>
+
+<!-- Back button -->
+<a href="creative.html" class="back-btn fade-in">
+    <img src="assets/static/back_button.png" alt="Back">
+</a>
+
+<!-- Asset buttons at the top -->
+
+<nav class="top-navigation">
+    <img id="topRightImage" src="assets/static/topbar.png" alt="Description of Image">
+    
+    <a href="creative.html" class="ui_button1">
+        <img src="assets/static/creative.png" alt="Creative">
+    </a>
+    <a href="index.html" class="ui_button2">
+        <img src="assets/static/un_about.png" alt="About">
+    </a>
+    <a href="tech.html" class="ui_button3">
+        <img src="assets/static/un_tech.png" alt="Tech">
+    </a>
+    <a href="resume.html" class="ui_button4">
+        <img src="assets/static/un_resume.png" alt="Resume">
+    </a>
+</nav>
+
+<!-- Sidebar with Contents -->
+<aside class="sidebar fade-in">
+    <h3>CONTENTS</h3>
+    <ul>
+        <li><a href="#overview"><img src="assets/static/light_but.png" class="circle" alt="Circle Icon">Overview</a></li>
+        <li><a href="#highlights"><img src="assets/static/light_but.png" class="circle" alt="Circle Icon">Highlights</a></li>
+
+    </ul>
+</aside>
+
+<div class="top-image-container">
+    <div class="fade-in">
+    <img src="assets/static/test.png" alt="Description">
+    </div>
+</div>
+
+<!-- Overview section -->
+<section id="overview" class="overview fade-in">
+    <div class="content">
+        <section class="overview-split">
+            <div class="overview-left">
+                <h4>My Role</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse fermentum </p>
+                <h4>Team</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse fermentum </p>
+                <h4>Timeline & Status</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Suspendisse fermentum </p>
+                    
+            </div>
+            <div class="overview-right">
+                <h4>Overview</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum 
+                    semper quam, at tempus elit rhoncus a. n vitae venenatis lectus, nec feugiat lacus. 
+                    Fusce pharetra neque sed mattis elementum. Cras bibendum lacus cursus nulla 
+                    fringilla, eget faucibus purus viverra. Morbi dapibus libero ut bibendum luctus.
+                     Nam hendrerit id justo vel iaculis. Vivamus pulvinar ipsum tristique massa 
+                    malesuada bibendum. Maecenas vitae lobortis magna, quis varius nisi. Fusce 
+                    congue mauris</p>
+            </div>
+        </section>
+    </div>
+</section>
+
+<div class="divider-line"></div> 
+
+<!-- Highlights section -->
+<section id="highlights" class="highlights">
+    <div class="content">
+        <section class="highlights-split">
+            <div class="highlights-left">
+                <h4>Highlights</h4>
+            </div>
+            <div class="highlights-right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse fermentum 
+                    semper quam, at tempus elit rhoncus a. n vitae venenatis lectus, nec feugiat lacus. 
+                    Fusce pharetra neque sed mattis elementum. Cras bibendum lacus cursus nulla 
+                    fringilla, eget faucibus purus viverra.</p>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+<!-- CD Asset -->
+<img id="bottomLeftImage" src="assets/static/bottombar.png" alt="Description of Image">
+
+<div class="cd" id="cdElement">
+    <img src="assets/static/cd.png" alt="CD" class="rotating">
+</div>
+
+<!-- Music with title at the top -->
+<audio id="musicBar" controls autoplay>
+    <source src="assets/music/Super Mario Maker for Nintendo 3DS - MW Water Editor Theme.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<p class="music-title">
+    <span class="music-prefix">Now Playing:</span> Super Mario Maker for Nintendo 3DS - MW Water Editor Theme
+</p>
+
+<!--Script for the lil light -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section");
+    const links = document.querySelectorAll(".sidebar a");
+    const circleImage = "assets/static/light_but.png"; 
+
+    function updateActiveState() {
+    let currentSection = sections[0]; 
+
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionHeight = section.getBoundingClientRect().height;
+
+        // Check if the section is in the top 20% of the viewport
+        if (sectionTop <= window.innerHeight * 0.2 && sectionTop + sectionHeight > window.innerHeight * 0.2) {
+            currentSection = section;
+        }
+    });
+
+    links.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + currentSection.id) {
+            link.classList.add("active");
+        }
+    });
+
+    const activeCircle = document.querySelector("a.active .circle");
+    if (activeCircle) {
+        document.querySelectorAll(".circle").forEach(circle => {
+            circle.style.opacity = 0; 
+        });
+        activeCircle.style.opacity = 1; 
+    }
+}
+
+    window.addEventListener("scroll", updateActiveState);
+
+    updateActiveState();
+});
+
+
+</script>
+
+ <!--Fade in transition -->
+    <script>
+        window.addEventListener("load", function () {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+        fadeInElements.forEach(function (element) {
+            element.style.opacity = 1;
+        });
+    });
+    </script>
+
+    <script>
+        window.addEventListener("load", function () {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+        fadeInElements.forEach(function (element) {
+            element.style.opacity = element.classList.contains("scroll-prompt") ? 0.5 : 1;
+            element.style.transform = "translateY(0)";
+        });
+    });
+    </script>
+
+<!--Script to control the music -->
+<script>
+    const cdElement = document.getElementById('cdElement');
+    const musicBar = document.getElementById('musicBar');
+    const rotatingImage = cdElement.querySelector('img.rotating');
+
+    let isPlaying = true;
+
+    cdElement.addEventListener('click', function() {
+        if (isPlaying) {
+            musicBar.pause(); 
+            rotatingImage.style.animationPlayState = 'paused'; 
+        } else {
+            musicBar.play(); 
+            rotatingImage.style.animationPlayState = 'running'; 
+        }
+        isPlaying = !isPlaying; 
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nazeem Bacus - Design Portfolio</title>
+    <link rel="stylesheet" href="tc_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <video id="bgVideo" autoplay muted loop>
+        <source src="assets/bg_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Asset buttons at the top -->
+
+    <nav class="top-navigation">
+        <img id="topRightImage" src="assets/static/topbar.png" alt="Description of Image">
+        
+        <a href="creative.html" class="ui_button1">
+            <img src="assets/static/un_creative.png" alt="Creative">
+        </a>
+        <a href="index.html" class="ui_button2">
+            <img src="assets/static/un_about.png" alt="About">
+        </a>
+        <a href="tech.html" class="ui_button3">
+            <img src="assets/static/technical.png" alt="Tech">
+        </a>
+        <a href="https://drive.google.com/file/d/1tiu0alv2Lyo2h8SsFLJ44dOvQnTq-wHx/view?usp=sharing" class="ui_button4">
+            <img src="assets/static/un_resume.png" alt="Resume">
+        </a>
+    </nav>
+
+    <!-- About Section -->
+    <div class="about-container fade-in">
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Technical Gallery</h3>
+                <p>This gallery showcases my technical projects that highlight my innovative approach and proficiency, bridging the gap between my academic and professional life.</p>
+            </div>
+        </div>
+        <div class="divider-line"></div> <!-- Divider line -->
+    </div>
+
+
+    <!-- Gallery Section -->
+    <div class="gallery-container fade-in">
+        <!-- <a href="testPage.html" class="gallery-item">
+            <div class="item-image">
+                <img src="https://img.youtube.com/vi/WrZtHeXIIq8/maxresdefault.jpg" alt="Test Page Image">
+            </div>
+            <div class="item-content">
+                <h3 class="item-title">Training Monkeys with Pokémon</h3>
+                <p class="item-description">2023 - Advanced Computer Vision Integration</p>
+            </div>
+        </a> -->
+        <!-- Add more gallery items here -->
+    </div>
+
+
+    <!-- CD Asset --> 
+    <img id="bottomLeftImage" src="assets/static/bottombar.png" alt="Description of Image">
+
+
+    <div class="cd" id="cdElement">
+        <img src="assets/static/cd.png" alt="CD" class="rotating">
+      </div>
+      
+    <!-- Music with title at the top -->
+    <audio id="musicBar" controls autoplay>
+        <source src="assets/music/Super Mario Maker for Nintendo 3DS - MW Water Editor Theme.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <p class="music-title">
+        <span class="music-prefix">Now Playing:</span> Super Mario Maker for Nintendo 3DS - MW Water Editor Theme
+    </p>
+
+
+    <!--Script to control the music -->
+    <script>
+        const cdElement = document.getElementById('cdElement');
+        const musicBar = document.getElementById('musicBar');
+        const rotatingImage = cdElement.querySelector('img.rotating');
+
+        let isPlaying = true;
+
+        cdElement.addEventListener('click', function() {
+            if (isPlaying) {
+                musicBar.pause(); 
+                rotatingImage.style.animationPlayState = 'paused'; 
+            } else {
+                musicBar.play(); 
+                rotatingImage.style.animationPlayState = 'running'; 
+            }
+            isPlaying = !isPlaying; 
+        });
+    </script>
+
+    <!--Fade in transition -->
+    <script>
+        window.addEventListener("load", function () {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+        fadeInElements.forEach(function (element) {
+            element.style.opacity = 1;
+        });
+    });
+    </script>
+
+    <script>
+        window.addEventListener("load", function () {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+        fadeInElements.forEach(function (element) {
+            element.style.opacity = element.classList.contains("scroll-prompt") ? 0.5 : 1;
+            element.style.transform = "translateY(0)";
+        });
+    });
+    </script>
+        
+
+</body>
+
+</html>
