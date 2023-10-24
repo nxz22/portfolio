@@ -38,7 +38,7 @@
     <div class="about-container fade-in">
         <div class="about-content">
             <div class="about-text">
-                <h3>Technical Gallery</h3>
+                <h4>Technical Gallery</h4>
                 <p>This gallery showcases my technical projects that highlight my innovative approach and proficiency, bridging the gap between my academic and professional life.</p>
             </div>
         </div>
@@ -57,7 +57,6 @@
                 <p class="item-description">2023 - Advanced Computer Vision Integration</p>
             </div>
         </a> -->
-        <!-- Add more gallery items here -->
     </div>
 
 
@@ -78,47 +77,8 @@
         <span class="music-prefix">Now Playing:</span> Super Mario Maker for Nintendo 3DS - MW Water Editor Theme
     </p>
 
-
-    <!--Script to control the music -->
-    <script>
-        const cdElement = document.getElementById('cdElement');
-        const musicBar = document.getElementById('musicBar');
-        const rotatingImage = cdElement.querySelector('img.rotating');
-
-        let isPlaying = true;
-
-        cdElement.addEventListener('click', function() {
-            if (isPlaying) {
-                musicBar.pause(); 
-                rotatingImage.style.animationPlayState = 'paused'; 
-            } else {
-                musicBar.play(); 
-                rotatingImage.style.animationPlayState = 'running'; 
-            }
-            isPlaying = !isPlaying; 
-        });
-    </script>
-
-    <!--Fade in transition -->
-    <script>
-        window.addEventListener("load", function () {
-        const fadeInElements = document.querySelectorAll(".fade-in");
-        fadeInElements.forEach(function (element) {
-            element.style.opacity = 1;
-        });
-    });
-    </script>
-
-    <script>
-        window.addEventListener("load", function () {
-        const fadeInElements = document.querySelectorAll(".fade-in");
-        fadeInElements.forEach(function (element) {
-            element.style.opacity = element.classList.contains("scroll-prompt") ? 0.5 : 1;
-            element.style.transform = "translateY(0)";
-        });
-    });
-    </script>
-        
+<!-- Master JavaScript -->
+<script src="../../scripts.js"></script>
 
 </body>
 

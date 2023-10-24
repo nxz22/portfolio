@@ -43,7 +43,7 @@
     <div class="about-content">
         <div class="about-text">
             <h3>About Me</h3>
-            <p><strong>Hi I'm Nazeem!</strong> But everyone calls me <strong>Naz</strong>. My journey in <strong>digital art and graphic design</strong> spans over 8 years, building my desire for deeper creative expression.<br><br><strong>Engineering</strong>, a passion since my high school days, has transformed my most imaginative ideas into reality. I've been fortunate to collaborate with incredible individuals on some truly unique projects and as I approach graduation, I'm <strong>looking forward to my next chapter</strong>!</p>
+            <p><strong>Hi I'm Nazeem!</strong> But everyone calls me <strong>Naz</strong>. My journey in <strong>digital art and graphic design</strong> spans over 8 years, building my desire for deeper creative expression.<br><br><strong>Engineering</strong>, a passion since high school, has transformed my most imaginative ideas into reality. I've been fortunate to collaborate with incredible individuals on some truly unique projects and as I approach graduation, I'm <strong>looking forward to my next chapter</strong>!</p>
         </div>
         <img src="assets/static/naz.jpg" alt="About Image" class="about-image">
     </div>
@@ -151,60 +151,8 @@
     <span class="music-prefix">Now Playing:</span> Super Mario Maker for Nintendo 3DS - MW Water Editor Theme
 </p>
 
-<!-- Fade in transition -->
-<script>
-    window.addEventListener("scroll", function() {
-        let hiddenContent = document.querySelector(".hidden-content");
-        let scrollPrompt = document.querySelector(".scroll-prompt");
-
-        if (window.pageYOffset > 200) { 
-            hiddenContent.style.opacity = "1";
-            hiddenContent.style.transform = "translateY(0)";
-
-            scrollPrompt.style.opacity = "0";
-            scrollPrompt.style.transition = "opacity 0.5s";
-        }
-    });
-</script>
-
-<script>
-    window.addEventListener("load", function () {
-    const fadeInElements = document.querySelectorAll(".fade-in");
-    fadeInElements.forEach(function (element) {
-        element.style.opacity = 1;
-    });
-});
-</script>
-
-<script>
-    window.addEventListener("load", function () {
-    const fadeInElements = document.querySelectorAll(".fade-in");
-    fadeInElements.forEach(function (element) {
-        element.style.opacity = element.classList.contains("scroll-prompt") ? 0.5 : 1;
-        element.style.transform = "translateY(0)";
-    });
-});
-</script>
-
-<!--Script to control the music -->
-<script>
-    const cdElement = document.getElementById('cdElement');
-    const musicBar = document.getElementById('musicBar');
-    const rotatingImage = cdElement.querySelector('img.rotating');
-
-    let isPlaying = true;
-
-    cdElement.addEventListener('click', function() {
-        if (isPlaying) {
-            musicBar.pause(); 
-            rotatingImage.style.animationPlayState = 'paused'; 
-        } else {
-            musicBar.play(); 
-            rotatingImage.style.animationPlayState = 'running'; 
-        }
-        isPlaying = !isPlaying; 
-    });
-</script>
+<!-- Master JavaScript -->
+<script src="../../scripts.js"></script>
 
 </body>
 

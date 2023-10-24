@@ -37,7 +37,7 @@
     <div class="about-container fade-in">
         <div class="about-content">
             <div class="about-text">
-                <h3>Creative Gallery</h3>
+                <h4>Creative Gallery</h4>
                 <p>This is my space to showcase projects that may not fit the traditional mold of professionalism, but are a testament to my skills and creativity.</p>
             </div>
         </div>
@@ -47,7 +47,7 @@
 
     <!-- Gallery Section -->
     <div class="gallery-container fade-in">
-        <a href="testPage.html" class="gallery-item">
+        <a href="creative/monkey/testPage.html" class="gallery-item">
             <div class="item-image">
                 <img src="assets/static/testGal.png" alt="Test Page Image">
             </div>
@@ -78,45 +78,8 @@
     </p>
 
 
-    <!--Script to control the music -->
-    <script>
-        const cdElement = document.getElementById('cdElement');
-        const musicBar = document.getElementById('musicBar');
-        const rotatingImage = cdElement.querySelector('img.rotating');
-
-        let isPlaying = true;
-
-        cdElement.addEventListener('click', function() {
-            if (isPlaying) {
-                musicBar.pause(); 
-                rotatingImage.style.animationPlayState = 'paused'; 
-            } else {
-                musicBar.play(); 
-                rotatingImage.style.animationPlayState = 'running'; 
-            }
-            isPlaying = !isPlaying; 
-        });
-    </script>
-
-    <!--Fade in transition -->
-    <script>
-        window.addEventListener("load", function () {
-        const fadeInElements = document.querySelectorAll(".fade-in");
-        fadeInElements.forEach(function (element) {
-            element.style.opacity = 1;
-        });
-    });
-    </script>
-
-    <script>
-        window.addEventListener("load", function () {
-        const fadeInElements = document.querySelectorAll(".fade-in");
-        fadeInElements.forEach(function (element) {
-            element.style.opacity = element.classList.contains("scroll-prompt") ? 0.5 : 1;
-            element.style.transform = "translateY(0)";
-        });
-    });
-    </script>
+<!-- Master JavaScript -->
+<script src="../../scripts.js"></script>
         
 
 </body>
