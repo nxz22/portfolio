@@ -80,7 +80,6 @@ h3 {
     margin: 0 auto; 
 }
 
-
 .top-image-container {
     margin-left: 13.5px;
 }
@@ -436,3 +435,5 @@ h3 {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(85, 85, 85, 0.5);
 }
+
+
